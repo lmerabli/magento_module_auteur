@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_editor_editor_index>
+        <reference name="content">
+            <block type="learning_editor/adminhtml_editor" name="learning_editor_adminhtml_editor"></block>
+        </reference>
+    </adminhtml_editor_editor_index>
+
+    <adminhtml_editor_editor_edit>
+        <reference name="content">
+            <block type="learning_editor/adminhtml_editor_edit" name="learning_editor_adminhtml_editor_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="learning_editor/adminhtml_editor_edit_tabs" name="learning_editor_adminhtml_editor_edit_tabs">
+                <block type="learning_editor/adminhtml_editor_edit_tab_form" name="learning_editor_adminhtml_editor_edit_tab_form" />
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>learning_editor_adminhtml_editor_edit_tab_form</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_editor_editor_edit>
+
+    <adminhtml_editor_editor_products>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="learning_editor/adminhtml_editor_edit_tab_product" name="editor.edit.tab.product"/>
+            <block type="adminhtml/widget_grid_serializer" name="product_grid_serializer">
+                <reference name="product_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>editor.edit.tab.product</grid_block_name>
+                        <data_callback>getSelectedProducts</data_callback>
+                        <hidden_input_name>products</hidden_input_name>
+                        <reload_param_name>editor_products</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_editor_editor_products>
+
+    <adminhtml_editor_editor_productsgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="learning_editor/adminhtml_editor_edit_tab_product" name="editor.edit.tab.product"/>
+        </block>
+    </adminhtml_editor_editor_productsgrid>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <learning_editor_index_index>
+    <reference name="head">
+      <action method="addJs"><script>learning/jquery/jquery.bxeditor.js</script></action>
+      <action method="addItem">
+        <type>skin_js</type>
+        <name>learning/js/scripts.js</name>
+      </action>
+      <action method="addItem">
+        <type>skin_css</type>
+        <name>learning/css/style.css</name>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="learning_editor/editor"  name="learning_editor.editor" template="learning/editor.phtml" />
+    </reference>
+  </learning_editor_index_index>
+</layout>

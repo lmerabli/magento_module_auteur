@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Learning_Editor>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Learning_Editor>
+    </modules>
+</config>

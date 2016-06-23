@@ -1,0 +1,117 @@
+2016-06-23T17:53:38+00:00 ERR (3): 
+exception 'Exception' with message 'PayPal NVP CURL connection error #60: SSL certificate problem: unable to get local issuer certificate' in D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php:983
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(781): Mage_Paypal_Model_Api_Nvp->call('getPalDetails', Array)
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(189): Mage_Paypal_Model_Api_Nvp->callGetPalDetails()
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Block\Express\Shortcut.php(135): Mage_Paypal_Model_Express_Checkout->getCheckoutShortcutImageUrl()
+#3 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(918): Mage_Paypal_Block_Express_Shortcut->_beforeToHtml()
+#4 D:\wamp\www\magento\app\code\core\Mage\Checkout\Block\Cart.php(177): Mage_Core_Block_Abstract->toHtml()
+#5 D:\wamp\www\magento\app\design\frontend\rwd\default\template\checkout\cart.phtml(41): Mage_Checkout_Block_Cart->getMethodHtml('checkout.cart.m...')
+#6 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(241): include('D:\\wamp\\www\\mag...')
+#7 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\\rwd\\de...')
+#8 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#9 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#10 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Text\List.php(43): Mage_Core_Block_Abstract->toHtml()
+#11 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Text_List->_toHtml()
+#12 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#13 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('content', true)
+#14 D:\wamp\www\magento\app\design\frontend\rwd\default\template\page\1column.phtml(55): Mage_Core_Block_Abstract->getChildHtml('content')
+#15 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(241): include('D:\\wamp\\www\\mag...')
+#16 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\\rwd\\de...')
+#17 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#18 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#19 D:\wamp\www\magento\app\code\core\Mage\Core\Model\Layout.php(555): Mage_Core_Block_Abstract->toHtml()
+#20 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(390): Mage_Core_Model_Layout->getOutput()
+#21 D:\wamp\www\magento\app\code\core\Mage\Checkout\controllers\CartController.php(181): Mage_Core_Controller_Varien_Action->renderLayout()
+#22 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_CartController->indexAction()
+#23 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#24 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#25 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#26 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#27 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#28 {main}
+2016-06-23T17:53:38+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Unable to communicate with the PayPal gateway.' in D:\wamp\www\magento\app\Mage.php:595
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(988): Mage::throwException('Unable to commu...')
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(781): Mage_Paypal_Model_Api_Nvp->call('getPalDetails', Array)
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(189): Mage_Paypal_Model_Api_Nvp->callGetPalDetails()
+#3 D:\wamp\www\magento\app\code\core\Mage\Paypal\Block\Express\Shortcut.php(135): Mage_Paypal_Model_Express_Checkout->getCheckoutShortcutImageUrl()
+#4 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(918): Mage_Paypal_Block_Express_Shortcut->_beforeToHtml()
+#5 D:\wamp\www\magento\app\code\core\Mage\Checkout\Block\Cart.php(177): Mage_Core_Block_Abstract->toHtml()
+#6 D:\wamp\www\magento\app\design\frontend\rwd\default\template\checkout\cart.phtml(41): Mage_Checkout_Block_Cart->getMethodHtml('checkout.cart.m...')
+#7 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(241): include('D:\\wamp\\www\\mag...')
+#8 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\\rwd\\de...')
+#9 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#10 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#11 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Text\List.php(43): Mage_Core_Block_Abstract->toHtml()
+#12 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Text_List->_toHtml()
+#13 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#14 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('content', true)
+#15 D:\wamp\www\magento\app\design\frontend\rwd\default\template\page\1column.phtml(55): Mage_Core_Block_Abstract->getChildHtml('content')
+#16 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(241): include('D:\\wamp\\www\\mag...')
+#17 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\\rwd\\de...')
+#18 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#19 D:\wamp\www\magento\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#20 D:\wamp\www\magento\app\code\core\Mage\Core\Model\Layout.php(555): Mage_Core_Block_Abstract->toHtml()
+#21 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(390): Mage_Core_Model_Layout->getOutput()
+#22 D:\wamp\www\magento\app\code\core\Mage\Checkout\controllers\CartController.php(181): Mage_Core_Controller_Varien_Action->renderLayout()
+#23 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_CartController->indexAction()
+#24 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#25 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#26 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#27 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#28 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#29 {main}
+2016-06-23T17:53:52+00:00 ERR (3): 
+exception 'Exception' with message 'PayPal NVP CURL connection error #60: SSL certificate problem: unable to get local issuer certificate' in D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php:983
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Controller\Express\Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://127.0.0....', 'http://127.0.0....', true)
+#3 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#4 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#5 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#9 {main}
+2016-06-23T17:57:05+00:00 ERR (3): 
+exception 'Exception' with message 'PayPal NVP CURL connection error #60: SSL certificate problem: unable to get local issuer certificate' in D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php:983
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Controller\Express\Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://127.0.0....', 'http://127.0.0....', true)
+#3 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#4 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#5 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#9 {main}
+2016-06-23T17:57:07+00:00 ERR (3): 
+exception 'Exception' with message 'PayPal NVP CURL connection error #60: SSL certificate problem: unable to get local issuer certificate' in D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php:983
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Controller\Express\Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://127.0.0....', 'http://127.0.0....', true)
+#3 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#4 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#5 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#9 {main}
+2016-06-23T17:57:18+00:00 ERR (3): 
+exception 'Exception' with message 'PayPal NVP CURL connection error #60: SSL certificate problem: unable to get local issuer certificate' in D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php:983
+Stack trace:
+#0 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Api\Nvp.php(616): Mage_Paypal_Model_Api_Nvp->call('SetExpressCheck...', Array)
+#1 D:\wamp\www\magento\app\code\core\Mage\Paypal\Model\Express\Checkout.php(381): Mage_Paypal_Model_Api_Nvp->callSetExpressCheckout()
+#2 D:\wamp\www\magento\app\code\core\Mage\Paypal\Controller\Express\Abstract.php(108): Mage_Paypal_Model_Express_Checkout->start('http://127.0.0....', 'http://127.0.0....', true)
+#3 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Paypal_Controller_Express_Abstract->startAction()
+#4 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('start')
+#5 D:\wamp\www\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 D:\wamp\www\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 D:\wamp\www\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 D:\wamp\www\magento\index.php(83): Mage::run('', 'store')
+#9 {main}
